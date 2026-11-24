@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterDeliveryCodeView" customModule="Yapp_Proveedor" customModuleProvider="target">
+            <connections>
+                <outlet property="deliveryCodeTxtField" destination="iyV-9k-36v" id="EK0-EK-5oe"/>
+                <outlet property="headerLbl" destination="IZV-Yn-ueC" id="TJj-Ih-Sfw"/>
+                <outlet property="messageLbl" destination="Od9-YN-g2v" id="H9K-Vo-3fO"/>
+                <outlet property="negativeLbl" destination="jEn-4g-2tH" id="UR8-Tg-8cg"/>
+                <outlet property="positiveLbl" destination="TzE-lS-Mtk" id="WN7-0V-6ZO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZV-Yn-ueC">
+                    <rect key="frame" x="15" y="15" width="345" height="24"/>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Od9-YN-g2v">
+                    <rect key="frame" x="15" y="54" width="345" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyV-9k-36v" customClass="MyTextField" customModule="Yapp_Proveedor" customModuleProvider="target">
+                    <rect key="frame" x="15" y="88.5" width="345" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="tTa-tY-uoh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uS-aP-wvH">
+                    <rect key="frame" x="0.0" y="144" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzE-lS-Mtk" customClass="MyLabel" customModule="Yapp_Proveedor" customModuleProvider="target">
+                            <rect key="frame" x="322.5" y="16" width="37.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Semibold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-4g-2tH" customClass="MyLabel" customModule="Yapp_Proveedor" customModuleProvider="target">
+                            <rect key="frame" x="275" y="16" width="37.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Semibold"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="TzE-lS-Mtk" firstAttribute="centerY" secondItem="4uS-aP-wvH" secondAttribute="centerY" id="3QU-QM-T2g"/>
+                        <constraint firstAttribute="trailing" secondItem="TzE-lS-Mtk" secondAttribute="trailing" constant="15" id="FE1-vS-PZE"/>
+                        <constraint firstAttribute="height" constant="50" id="NB2-vo-eo7"/>
+                        <constraint firstItem="TzE-lS-Mtk" firstAttribute="leading" secondItem="jEn-4g-2tH" secondAttribute="trailing" constant="10" id="Ps4-dh-g53"/>
+                        <constraint firstItem="jEn-4g-2tH" firstAttribute="centerY" secondItem="4uS-aP-wvH" secondAttribute="centerY" id="jJm-iF-j1v"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jME-Nm-6BH">
+                    <rect key="frame" x="0.0" y="143" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="39P-jM-6lD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4uS-aP-wvH" secondAttribute="bottom" constant="10" id="0q9-NO-EAq"/>
+                <constraint firstAttribute="trailing" secondItem="iyV-9k-36v" secondAttribute="trailing" constant="15" id="3gp-7m-TWj"/>
+                <constraint firstItem="4uS-aP-wvH" firstAttribute="top" secondItem="jME-Nm-6BH" secondAttribute="bottom" id="8dk-k6-w83"/>
+                <constraint firstItem="IZV-Yn-ueC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Dfk-mh-mMs"/>
+                <constraint firstAttribute="trailing" secondItem="IZV-Yn-ueC" secondAttribute="trailing" constant="15" id="Exd-o3-o4F"/>
+                <constraint firstAttribute="trailing" secondItem="jME-Nm-6BH" secondAttribute="trailing" id="HTS-Nh-PVv"/>
+                <constraint firstItem="iyV-9k-36v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="HU8-k1-VSZ"/>
+                <constraint firstItem="4uS-aP-wvH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lg7-ZT-s3J"/>
+                <constraint firstItem="iyV-9k-36v" firstAttribute="top" secondItem="Od9-YN-g2v" secondAttribute="bottom" constant="15" id="WWB-1q-NUm"/>
+                <constraint firstItem="jME-Nm-6BH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a1U-O0-x0E"/>
+                <constraint firstItem="Od9-YN-g2v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="bXS-Sc-nZ4"/>
+                <constraint firstItem="Od9-YN-g2v" firstAttribute="top" secondItem="IZV-Yn-ueC" secondAttribute="bottom" constant="15" id="eFi-jc-7fQ"/>
+                <constraint firstAttribute="trailing" secondItem="4uS-aP-wvH" secondAttribute="trailing" id="fNy-lz-ngd"/>
+                <constraint firstAttribute="trailing" secondItem="Od9-YN-g2v" secondAttribute="trailing" constant="15" id="jcK-m9-Syh"/>
+                <constraint firstItem="IZV-Yn-ueC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="lEZ-P5-Iah"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="23.199999999999999" y="71.514242878560722"/>
+        </view>
+    </objects>
+</document>

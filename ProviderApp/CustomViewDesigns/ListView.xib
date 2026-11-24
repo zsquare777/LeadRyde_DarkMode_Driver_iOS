@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListView" customModule="DriverApp" customModuleProvider="target">
+            <connections>
+                <outlet property="bgListView" destination="7pa-nN-fJS" id="w9B-hb-LwI"/>
+                <outlet property="bottomConstrains" destination="8U9-mM-Ooz" id="2Rv-cg-rrn"/>
+                <outlet property="closeImgView" destination="haP-WD-h4L" id="RDT-k3-BAD"/>
+                <outlet property="leadingConstrains" destination="ha2-5k-cNp" id="oMZ-yO-aNp"/>
+                <outlet property="tableView" destination="rS7-yh-Srt" id="Grl-bK-n8R"/>
+                <outlet property="titleLabelTxt" destination="AG4-XG-Oz0" id="4Kg-0C-Q8N"/>
+                <outlet property="topConstains" destination="5AH-eF-b9k" id="wMW-la-WVP"/>
+                <outlet property="trailingConstrains" destination="8xi-Hb-qz0" id="Ix8-lK-HlM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="318"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-nN-fJS">
+                    <rect key="frame" x="15" y="15" width="305" height="288"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-XG-Oz0" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="5" width="255" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="5Y3-Gf-8WV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-KC-AUG">
+                            <rect key="frame" x="260" y="7" width="40" height="40"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_close_detail" translatesAutoresizingMaskIntoConstraints="NO" id="haP-WD-h4L">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="haP-WD-h4L" firstAttribute="leading" secondItem="ly5-KC-AUG" secondAttribute="leading" id="BXd-aX-qC2"/>
+                                <constraint firstAttribute="trailing" secondItem="haP-WD-h4L" secondAttribute="trailing" id="GMl-fr-z0L"/>
+                                <constraint firstItem="haP-WD-h4L" firstAttribute="centerX" secondItem="ly5-KC-AUG" secondAttribute="centerX" id="HYP-CS-9Gu"/>
+                                <constraint firstAttribute="height" constant="40" id="IgX-8A-FgO"/>
+                                <constraint firstItem="haP-WD-h4L" firstAttribute="top" secondItem="ly5-KC-AUG" secondAttribute="top" id="JOL-ti-lgD"/>
+                                <constraint firstAttribute="width" constant="40" id="o9m-Js-nqx"/>
+                                <constraint firstItem="haP-WD-h4L" firstAttribute="centerY" secondItem="ly5-KC-AUG" secondAttribute="centerY" id="on6-al-u45"/>
+                                <constraint firstAttribute="bottom" secondItem="haP-WD-h4L" secondAttribute="bottom" id="pXH-ty-hU3"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWj-RM-9sk">
+                            <rect key="frame" x="10" y="54" width="275" height="1"/>
+                            <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="4el-EF-sgR"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isDividerHidden" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rS7-yh-Srt">
+                            <rect key="frame" x="0.0" y="60" width="305" height="225"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kWj-RM-9sk" firstAttribute="leading" secondItem="7pa-nN-fJS" secondAttribute="leading" constant="10" id="4Pr-Np-OnM"/>
+                        <constraint firstAttribute="trailing" secondItem="kWj-RM-9sk" secondAttribute="trailing" constant="20" id="6Hz-U7-rS0"/>
+                        <constraint firstItem="rS7-yh-Srt" firstAttribute="top" secondItem="kWj-RM-9sk" secondAttribute="bottom" constant="5" id="D1N-Cg-Zvl"/>
+                        <constraint firstAttribute="bottom" secondItem="rS7-yh-Srt" secondAttribute="bottom" constant="3" id="Hka-r3-PpX"/>
+                        <constraint firstAttribute="trailing" secondItem="rS7-yh-Srt" secondAttribute="trailing" id="K9d-Fz-NhC"/>
+                        <constraint firstItem="kWj-RM-9sk" firstAttribute="top" secondItem="AG4-XG-Oz0" secondAttribute="bottom" constant="5" id="V4P-Zw-KY0"/>
+                        <constraint firstItem="ly5-KC-AUG" firstAttribute="leading" secondItem="AG4-XG-Oz0" secondAttribute="trailing" constant="5" id="cLQ-d8-w6O"/>
+                        <constraint firstItem="ly5-KC-AUG" firstAttribute="centerY" secondItem="AG4-XG-Oz0" secondAttribute="centerY" id="cl4-A6-ot4"/>
+                        <constraint firstItem="rS7-yh-Srt" firstAttribute="leading" secondItem="7pa-nN-fJS" secondAttribute="leading" id="izQ-cY-3lb"/>
+                        <constraint firstItem="AG4-XG-Oz0" firstAttribute="top" secondItem="7pa-nN-fJS" secondAttribute="top" constant="5" id="jlT-qf-zeY"/>
+                        <constraint firstItem="AG4-XG-Oz0" firstAttribute="leading" secondItem="7pa-nN-fJS" secondAttribute="leading" id="wpZ-Ch-CHe"/>
+                        <constraint firstAttribute="trailing" secondItem="ly5-KC-AUG" secondAttribute="trailing" constant="5" id="xk2-xw-SGL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7pa-nN-fJS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="5AH-eF-b9k"/>
+                <constraint firstAttribute="bottom" secondItem="7pa-nN-fJS" secondAttribute="bottom" constant="15" id="8U9-mM-Ooz"/>
+                <constraint firstAttribute="trailing" secondItem="7pa-nN-fJS" secondAttribute="trailing" constant="15" id="8xi-Hb-qz0"/>
+                <constraint firstItem="7pa-nN-fJS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="ha2-5k-cNp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-180.43478260869566" y="-179.46428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close_detail" width="72" height="72"/>
+    </resources>
+</document>

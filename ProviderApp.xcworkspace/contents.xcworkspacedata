@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ProviderApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:THEME_IMPLEMENTATION_GUIDE.md">
+   </FileRef>
+   <FileRef
+      location = "group:DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md">
+   </FileRef>
+   <FileRef
+      location = "group:DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md">
+   </FileRef>
+</Workspace>

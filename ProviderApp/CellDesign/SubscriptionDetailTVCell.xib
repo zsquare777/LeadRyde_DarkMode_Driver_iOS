@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubscriptionDetailTVCell" rowHeight="225" id="Zqp-F4-Fzm" customClass="SubscriptionDetailTVCell" customModule="DriverApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zqp-F4-Fzm" id="XQI-It-vgZ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="224.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtm-Zc-YqN">
+                        <rect key="frame" x="10" y="10.5" width="394" height="210"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uf-4r-IzF">
+                                <rect key="frame" x="0.0" y="210" width="394" height="0.0"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-3H-V5i" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="42" y="0.0" width="0.0" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="fzL-Ok-eed" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fzL-Ok-eed" secondAttribute="bottom" id="93f-gS-1dD"/>
+                                    <constraint firstAttribute="trailing" secondItem="fzL-Ok-eed" secondAttribute="trailing" id="Bur-g0-1yr"/>
+                                    <constraint firstAttribute="height" id="P4A-uu-eiJ"/>
+                                    <constraint firstItem="fzL-Ok-eed" firstAttribute="leading" secondItem="2Uf-4r-IzF" secondAttribute="leading" id="ZlU-TT-jt4"/>
+                                    <constraint firstItem="fzL-Ok-eed" firstAttribute="top" secondItem="2Uf-4r-IzF" secondAttribute="top" id="m5N-dQ-LFg"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mg5-ye-gLM">
+                                <rect key="frame" x="319" y="0.0" width="75" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-4Z-eln" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="210"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vLC-4Z-eln" secondAttribute="trailing" id="0k3-rO-o7n"/>
+                                    <constraint firstAttribute="bottom" secondItem="vLC-4Z-eln" secondAttribute="bottom" id="Mdf-X7-4ig"/>
+                                    <constraint firstAttribute="width" constant="75" id="TVL-0Y-0i4"/>
+                                    <constraint firstItem="vLC-4Z-eln" firstAttribute="top" secondItem="Mg5-ye-gLM" secondAttribute="top" id="gAR-GY-HL6"/>
+                                    <constraint firstItem="vLC-4Z-eln" firstAttribute="leading" secondItem="Mg5-ye-gLM" secondAttribute="leading" id="vig-Fb-Il3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZhE-E4-UjY">
+                                <rect key="frame" x="0.0" y="5" width="394" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-tK-TWT">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-zo-jg8">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="khe-il-T3X" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="drq-AD-lUq"/>
+                                                            <constraint firstAttribute="height" constant="40" id="j07-i1-k5d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="mZi-xB-qcW" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="40" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="LYI-QH-hfW"/>
+                                                            <constraint firstAttribute="height" constant="40" id="TnB-5t-GMd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-cy-IEy" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="7Pf-AW-k4z"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="7dE-dG-H5t"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-db-iJQ" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="a1L-gR-WbO"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ajB-Fa-Y2Z"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="9fU-0d-Z18" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="160" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ms2-rc-opU"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="fXr-p4-1LB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="gwl-zo-jg8" firstAttribute="leading" secondItem="Ysa-tK-TWT" secondAttribute="leading" id="484-4y-m4H"/>
+                                            <constraint firstAttribute="bottom" secondItem="gwl-zo-jg8" secondAttribute="bottom" id="EWR-J6-b7B"/>
+                                            <constraint firstItem="gwl-zo-jg8" firstAttribute="top" secondItem="Ysa-tK-TWT" secondAttribute="top" id="oKi-F1-k8u"/>
+                                            <constraint firstAttribute="trailing" secondItem="gwl-zo-jg8" secondAttribute="trailing" id="v4C-L6-apF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-xF-2Ty">
+                                        <rect key="frame" x="197" y="0.0" width="197" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZqM-Hs-VTG">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-NO-DLD" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="DXj-Dt-Zi0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558219178" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="r4V-Ya-3Cj" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="40" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="yJ2-6F-lft"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iO2-DH-MEa" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Jmg-dL-9tO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-6c-QEp" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="efQ-6q-y6d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="gDJ-h8-bD1" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="160" width="197" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="O6J-68-5Vm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ZqM-Hs-VTG" firstAttribute="top" secondItem="rK4-xF-2Ty" secondAttribute="top" id="08k-B1-fxG"/>
+                                            <constraint firstItem="ZqM-Hs-VTG" firstAttribute="leading" secondItem="rK4-xF-2Ty" secondAttribute="leading" id="1sc-ju-8ef"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZqM-Hs-VTG" secondAttribute="bottom" id="V9M-uY-8BA"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZqM-Hs-VTG" secondAttribute="trailing" id="ee0-sI-YtV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Uf-4r-IzF" firstAttribute="leading" secondItem="qtm-Zc-YqN" secondAttribute="leading" id="46y-h9-Vjk"/>
+                            <constraint firstAttribute="trailing" secondItem="2Uf-4r-IzF" secondAttribute="trailing" id="Fr9-er-c1T"/>
+                            <constraint firstItem="ZhE-E4-UjY" firstAttribute="top" secondItem="qtm-Zc-YqN" secondAttribute="top" constant="5" id="Gfi-rk-Nld"/>
+                            <constraint firstItem="Mg5-ye-gLM" firstAttribute="top" secondItem="qtm-Zc-YqN" secondAttribute="top" id="SMs-z6-gpE"/>
+                            <constraint firstItem="2Uf-4r-IzF" firstAttribute="top" secondItem="Mg5-ye-gLM" secondAttribute="bottom" id="Zx0-1m-Xok"/>
+                            <constraint firstItem="2Uf-4r-IzF" firstAttribute="top" secondItem="ZhE-E4-UjY" secondAttribute="bottom" constant="5" id="aO8-wp-gVr"/>
+                            <constraint firstAttribute="trailing" secondItem="Mg5-ye-gLM" secondAttribute="trailing" id="k5p-hu-hHH"/>
+                            <constraint firstAttribute="trailing" secondItem="ZhE-E4-UjY" secondAttribute="trailing" id="oWA-AK-Y4d"/>
+                            <constraint firstItem="ZhE-E4-UjY" firstAttribute="leading" secondItem="qtm-Zc-YqN" secondAttribute="leading" id="wT5-EY-Ta2"/>
+                            <constraint firstAttribute="bottom" secondItem="2Uf-4r-IzF" secondAttribute="bottom" id="yeB-cG-UA2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.59999999999999998"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="0.59999999999999998"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ol-XZ-vdh">
+                        <rect key="frame" x="10" y="10.5" width="394" height="210"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMD-8c-jP8" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="15" width="369" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="g3G-tq-qUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73s-Rq-kaN" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="122" width="39.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EjS-Rx-gfU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z79-ow-CYV" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="62" width="374" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RB-Gm-67X">
+                                <rect key="frame" x="10" y="110" width="374" height="0.0"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qh4-GE-teM">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KwW-1j-HVD">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="lQ9-pl-1uu" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="0cX-Bt-UuA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="MGl-bK-kqM" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="40" width="187" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="5j3-3O-mPG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="KwW-1j-HVD" firstAttribute="leading" secondItem="qh4-GE-teM" secondAttribute="leading" id="Sxd-g1-fYP"/>
+                                            <constraint firstItem="KwW-1j-HVD" firstAttribute="top" secondItem="qh4-GE-teM" secondAttribute="top" id="eEa-1p-CaM"/>
+                                            <constraint firstAttribute="bottom" secondItem="KwW-1j-HVD" secondAttribute="bottom" id="fgm-qW-mCA"/>
+                                            <constraint firstAttribute="trailing" secondItem="KwW-1j-HVD" secondAttribute="trailing" id="xjb-iZ-UFw"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zv-2p-n9i">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-Oe-Mzw">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-sQ-uRa" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="ZWM-6L-e0t"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ElV-GZ-xbY" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="40" width="187" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="bed-84-Pvn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.4708636558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bSP-Oe-Mzw" secondAttribute="trailing" id="G3H-ly-o8Y"/>
+                                            <constraint firstItem="bSP-Oe-Mzw" firstAttribute="top" secondItem="8zv-2p-n9i" secondAttribute="top" id="h2B-cP-6Dw"/>
+                                            <constraint firstAttribute="bottom" secondItem="bSP-Oe-Mzw" secondAttribute="bottom" id="qb0-tt-BH2"/>
+                                            <constraint firstItem="bSP-Oe-Mzw" firstAttribute="leading" secondItem="8zv-2p-n9i" secondAttribute="leading" id="rIg-Nj-0Dg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Mme-MM-gbV"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Drg-Nl-CUU" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="384" y="15" width="0.0" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ZZ2-Co-avA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj0-dL-hkC" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="42" width="327" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="4Tl-kr-IDM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SN5-0W-LA5" customClass="CMSwitchView">
+                                <rect key="frame" x="300" y="160" width="55" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="2Hx-Ol-jjv" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                <rect key="frame" x="57.5" y="120" width="326.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="bdh-RO-rb1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Medium"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-11-yda">
+                                <rect key="frame" x="20" y="160" width="354" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="2pF-vf-bir" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="DlP-Wt-Rav" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="128" y="0.0" width="98" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-GM-aLz" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="0.0" width="98" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="fontFamilyWeight" value="Regular"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="csO-SR-Tp5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Hx-Ol-jjv" secondAttribute="trailing" constant="10" id="1zH-Pg-f3b"/>
+                            <constraint firstItem="Drg-Nl-CUU" firstAttribute="top" secondItem="7Ol-XZ-vdh" secondAttribute="top" constant="15" id="4nn-Xv-yVa"/>
+                            <constraint firstItem="2Hx-Ol-jjv" firstAttribute="leading" secondItem="73s-Rq-kaN" secondAttribute="trailing" constant="8" id="5hg-mP-szW"/>
+                            <constraint firstItem="2Hx-Ol-jjv" firstAttribute="top" secondItem="7RB-Gm-67X" secondAttribute="bottom" constant="10" id="6cG-xT-H2b"/>
+                            <constraint firstItem="z79-ow-CYV" firstAttribute="top" secondItem="uj0-dL-hkC" secondAttribute="bottom" constant="5" id="8Yy-7J-X6q"/>
+                            <constraint firstItem="7RB-Gm-67X" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="10" id="ENN-KL-D2n"/>
+                            <constraint firstAttribute="trailing" secondItem="uj0-dL-hkC" secondAttribute="trailing" constant="57" id="I0c-15-uAt"/>
+                            <constraint firstAttribute="trailing" secondItem="hOw-11-yda" secondAttribute="trailing" constant="20" id="JyD-Wv-Z71"/>
+                            <constraint firstItem="uj0-dL-hkC" firstAttribute="top" secondItem="WMD-8c-jP8" secondAttribute="bottom" constant="2" id="KES-DZ-g25"/>
+                            <constraint firstAttribute="trailing" secondItem="z79-ow-CYV" secondAttribute="trailing" constant="10" id="S1E-XY-w0e"/>
+                            <constraint firstItem="7RB-Gm-67X" firstAttribute="top" secondItem="z79-ow-CYV" secondAttribute="bottom" constant="10" id="SDp-4t-27c"/>
+                            <constraint firstItem="hOw-11-yda" firstAttribute="top" secondItem="2Hx-Ol-jjv" secondAttribute="bottom" constant="15" id="UI5-Fu-1NE"/>
+                            <constraint firstAttribute="trailing" secondItem="Drg-Nl-CUU" secondAttribute="trailing" constant="10" id="XLa-gW-V9c"/>
+                            <constraint firstItem="hOw-11-yda" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="20" id="aSl-pt-TVz"/>
+                            <constraint firstItem="Drg-Nl-CUU" firstAttribute="leading" secondItem="WMD-8c-jP8" secondAttribute="trailing" constant="5" id="avq-g6-HW4"/>
+                            <constraint firstItem="hOw-11-yda" firstAttribute="centerX" secondItem="7Ol-XZ-vdh" secondAttribute="centerX" id="ccf-co-Ukh"/>
+                            <constraint firstAttribute="trailing" secondItem="7RB-Gm-67X" secondAttribute="trailing" constant="10" id="dGC-q4-vDs"/>
+                            <constraint firstItem="uj0-dL-hkC" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="10" id="gZu-fq-GpB"/>
+                            <constraint firstItem="z79-ow-CYV" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="10" id="ib9-6l-w5m"/>
+                            <constraint firstAttribute="bottom" secondItem="hOw-11-yda" secondAttribute="bottom" constant="10" id="ice-LK-Wye"/>
+                            <constraint firstItem="73s-Rq-kaN" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="10" id="lub-sL-2PQ"/>
+                            <constraint firstItem="WMD-8c-jP8" firstAttribute="leading" secondItem="7Ol-XZ-vdh" secondAttribute="leading" constant="10" id="qbb-tD-RoK"/>
+                            <constraint firstItem="73s-Rq-kaN" firstAttribute="centerY" secondItem="2Hx-Ol-jjv" secondAttribute="centerY" id="tiH-AL-OQP"/>
+                            <constraint firstItem="WMD-8c-jP8" firstAttribute="top" secondItem="7Ol-XZ-vdh" secondAttribute="top" constant="15" id="zqB-ho-y4W"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.5" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.59999999999999998"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="0.59999999999999998"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7Ol-XZ-vdh" secondAttribute="bottom" constant="10" id="2P4-SH-C6D"/>
+                    <constraint firstItem="qtm-Zc-YqN" firstAttribute="top" secondItem="XQI-It-vgZ" secondAttribute="top" constant="10" id="AwQ-bB-zWX"/>
+                    <constraint firstAttribute="bottom" secondItem="qtm-Zc-YqN" secondAttribute="bottom" constant="10" id="RH1-Mk-RYx"/>
+                    <constraint firstAttribute="trailing" secondItem="qtm-Zc-YqN" secondAttribute="trailing" constant="10" id="Y0d-tk-QFR"/>
+                    <constraint firstItem="7Ol-XZ-vdh" firstAttribute="top" secondItem="XQI-It-vgZ" secondAttribute="top" constant="10" id="boG-bR-NkW"/>
+                    <constraint firstAttribute="trailing" secondItem="7Ol-XZ-vdh" secondAttribute="trailing" constant="10" id="pRz-lg-yfS"/>
+                    <constraint firstItem="qtm-Zc-YqN" firstAttribute="leading" secondItem="XQI-It-vgZ" secondAttribute="leading" constant="10" id="tab-xC-FoG"/>
+                    <constraint firstItem="7Ol-XZ-vdh" firstAttribute="leading" secondItem="XQI-It-vgZ" secondAttribute="leading" constant="10" id="tdt-KO-fKl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bottomMonthLbl" destination="UHy-3H-V5i" id="MI5-ae-ypM"/>
+                <outlet property="bottomStatusLbl" destination="fzL-Ok-eed" id="7eA-4k-F31"/>
+                <outlet property="dateStackViewTopSpace" destination="SDp-4t-27c" id="gL2-Tk-5xb"/>
+                <outlet property="daysLeftLbl" destination="vLC-4Z-eln" id="fcc-Jl-GQE"/>
+                <outlet property="daysLeftView" destination="Mg5-ye-gLM" id="sfD-6V-qnG"/>
+                <outlet property="dummyLbl" destination="DlP-Wt-Rav" id="6wE-fo-kkH"/>
+                <outlet property="h1Lbl" destination="khe-il-T3X" id="YHn-ac-rcQ"/>
+                <outlet property="h2Lbl" destination="VbU-cy-IEy" id="wuZ-YK-5Z1"/>
+                <outlet property="h3Lbl" destination="0ul-db-iJQ" id="rLE-Vn-2lu"/>
+                <outlet property="h4Lbl" destination="9fU-0d-Z18" id="n51-sb-4Wy"/>
+                <outlet property="planRenewLbl" destination="2pF-vf-bir" id="y1T-Hn-iQ5"/>
+                <outlet property="sDateHLbl1" destination="lQ9-pl-1uu" id="7ub-I5-iRl"/>
+                <outlet property="sDateHLbl2" destination="MGl-bK-kqM" id="5di-nl-hdp"/>
+                <outlet property="sDateStackView" destination="7RB-Gm-67X" id="PYs-gn-e8a"/>
+                <outlet property="sDateStackViewHeight" destination="Mme-MM-gbV" id="9HM-mh-unm"/>
+                <outlet property="sDateVLbl1" destination="mdJ-sQ-uRa" id="3oM-0a-zlN"/>
+                <outlet property="sDateVLbl2" destination="ElV-GZ-xbY" id="1pW-g9-8mO"/>
+                <outlet property="sDetailBottomView" destination="2Uf-4r-IzF" id="6Da-qi-JdL"/>
+                <outlet property="sDetailsStackViewTrailSpace" destination="oWA-AK-Y4d" id="GfK-rm-VPy"/>
+                <outlet property="sDurHLbl" destination="mZi-xB-qcW" id="1kH-nJ-V7M"/>
+                <outlet property="sDurVLbl" destination="r4V-Ya-3Cj" id="Gtl-b4-EAQ"/>
+                <outlet property="sH1Lbl" destination="Xg2-NO-DLD" id="mMg-0J-WAl"/>
+                <outlet property="sH2Lbl" destination="iO2-DH-MEa" id="wlu-fy-V8d"/>
+                <outlet property="sH3Lbl" destination="Pf8-6c-QEp" id="LcI-ZH-Gs9"/>
+                <outlet property="sH4Lbl" destination="gDJ-h8-bD1" id="NFP-vf-SgE"/>
+                <outlet property="sPlaNameLbl" destination="uj0-dL-hkC" id="emc-M8-qvY"/>
+                <outlet property="sPlanDescriptionLbl" destination="z79-ow-CYV" id="aFs-Ub-6c9"/>
+                <outlet property="sPlanDetailsLbl" destination="Drg-Nl-CUU" id="JFq-r2-QTQ"/>
+                <outlet property="sPlanHLbl" destination="WMD-8c-jP8" id="G4f-Nh-0tZ"/>
+                <outlet property="sPlanStatusLbl" destination="73s-Rq-kaN" id="zu4-c6-C2N"/>
+                <outlet property="sPlanStatusSwitch" destination="SN5-0W-LA5" id="g75-0K-UpQ"/>
+                <outlet property="sPlanStatusVLbl" destination="2Hx-Ol-jjv" id="2zT-MK-7Wh"/>
+                <outlet property="sPlanSubscribeLbl" destination="c5h-GM-aLz" id="VeF-YS-5JG"/>
+                <outlet property="statusLblHeight" destination="bdh-RO-rb1" id="qIa-ZI-ETK"/>
+                <outlet property="statusTopSpace" destination="6cG-xT-H2b" id="Lcu-em-hKh"/>
+                <outlet property="subscriptionDetailsView" destination="qtm-Zc-YqN" id="C2H-qJ-b0e"/>
+                <outlet property="subscriptionPlanView" destination="7Ol-XZ-vdh" id="NS2-rK-9mj"/>
+            </connections>
+            <point key="canvasLocation" x="-155.07246376811597" y="105.13392857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

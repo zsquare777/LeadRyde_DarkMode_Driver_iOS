@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActiveTripUV" customModule="DriverApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addDestDetailsView" destination="aaG-aL-H7q" id="Nei-uU-PmP"/>
+                <outlet property="addDestLbl" destination="Cdc-VS-Cho" id="DNj-MT-Mnd"/>
+                <outlet property="addDestView" destination="UD9-8t-HjX" id="Pk6-LN-Leh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UD9-8t-HjX">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="50"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-aL-H7q">
+                    <rect key="frame" x="0.0" y="0.0" width="435" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="EEE-KN-tEN">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="b5r-np-ztp"/>
+                                <constraint firstAttribute="height" constant="50" id="gcw-7n-m8k"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdc-VS-Cho" customClass="MyLabel" customModule="DriverApp" customModuleProvider="target">
+                            <rect key="frame" x="50" y="0.0" width="385" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="EEE-KN-tEN" firstAttribute="leading" secondItem="aaG-aL-H7q" secondAttribute="leading" id="1jf-Ji-GsF"/>
+                        <constraint firstItem="EEE-KN-tEN" firstAttribute="top" secondItem="aaG-aL-H7q" secondAttribute="top" id="Gwo-nr-pzH"/>
+                        <constraint firstItem="Cdc-VS-Cho" firstAttribute="top" secondItem="aaG-aL-H7q" secondAttribute="top" id="Mdh-9o-PXy"/>
+                        <constraint firstAttribute="bottom" secondItem="EEE-KN-tEN" secondAttribute="bottom" id="aeB-Ou-Zfx"/>
+                        <constraint firstAttribute="bottom" secondItem="Cdc-VS-Cho" secondAttribute="bottom" id="b7F-t6-p9W"/>
+                        <constraint firstAttribute="trailing" secondItem="Cdc-VS-Cho" secondAttribute="trailing" id="oAi-pL-fe3"/>
+                        <constraint firstItem="Cdc-VS-Cho" firstAttribute="leading" secondItem="EEE-KN-tEN" secondAttribute="trailing" id="pDc-EB-Cuh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aaG-aL-H7q" firstAttribute="top" secondItem="UD9-8t-HjX" secondAttribute="top" id="Ill-mH-L26"/>
+                <constraint firstAttribute="bottom" secondItem="aaG-aL-H7q" secondAttribute="bottom" id="L14-AP-UIp"/>
+                <constraint firstItem="aaG-aL-H7q" firstAttribute="leading" secondItem="UD9-8t-HjX" secondAttribute="leading" id="ZLN-Zz-ABj"/>
+                <constraint firstAttribute="trailing" secondItem="aaG-aL-H7q" secondAttribute="trailing" id="yKO-ze-b4i"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="56.5" y="-124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_search" width="60" height="60"/>
+    </resources>
+</document>
