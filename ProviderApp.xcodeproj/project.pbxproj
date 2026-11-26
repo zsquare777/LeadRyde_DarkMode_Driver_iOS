@@ -1061,6 +1061,10 @@
 		CB0B01B230B163AE000A4710 /* ROUNDED_CORNERS_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = CB0B01B130B163AE000A4710 /* ROUNDED_CORNERS_FIX.md */; };
 		CB0B01B430B1658D000A4710 /* ADD_MONEY_DARK_MODE_IMPLEMENTATION.md in Resources */ = {isa = PBXBuildFile; fileRef = CB0B01B330B1658D000A4710 /* ADD_MONEY_DARK_MODE_IMPLEMENTATION.md */; };
 		CB0B01B630B16737000A4710 /* ADD_MONEY_POPUP_DARK_MODE_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = CB0B01B530B16737000A4710 /* ADD_MONEY_POPUP_DARK_MODE_FIX.md */; };
+		CB1C164630B7F7D100200C69 /* DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md in Resources */ = {isa = PBXBuildFile; fileRef = CB1C164530B7F7D100200C69 /* DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md */; };
+		CB1C164830B7F80400200C69 /* DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md in Resources */ = {isa = PBXBuildFile; fileRef = CB1C164730B7F80400200C69 /* DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md */; };
+		CB1C164A30B7F9C700200C69 /* ACTIVE_TRIP_DARK_MODE_GUIDE.md in Resources */ = {isa = PBXBuildFile; fileRef = CB1C164930B7F9C700200C69 /* ACTIVE_TRIP_DARK_MODE_GUIDE.md */; };
+		CB1C164C30B7FAD700200C69 /* ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = CB1C164B30B7FAD700200C69 /* ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md */; };
 		CB3C314C30A2EE42009070C1 /* THEME_UPDATES_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = CB3C314B30A2EE42009070C1 /* THEME_UPDATES_SUMMARY.md */; };
 		CB3C63A32E0933E8009CF31A /* YourZonesUV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3C63A12E0933E8009CF31A /* YourZonesUV.swift */; };
 		CB3C63A42E0933E8009CF31A /* YourZonesUV.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3C63A22E0933E8009CF31A /* YourZonesUV.xib */; };
@@ -2293,6 +2297,10 @@
 		CB0B01B130B163AE000A4710 /* ROUNDED_CORNERS_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ROUNDED_CORNERS_FIX.md; sourceTree = "<group>"; };
 		CB0B01B330B1658D000A4710 /* ADD_MONEY_DARK_MODE_IMPLEMENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ADD_MONEY_DARK_MODE_IMPLEMENTATION.md; sourceTree = "<group>"; };
 		CB0B01B530B16737000A4710 /* ADD_MONEY_POPUP_DARK_MODE_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ADD_MONEY_POPUP_DARK_MODE_FIX.md; sourceTree = "<group>"; };
+		CB1C164530B7F7D100200C69 /* DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md; sourceTree = "<group>"; };
+		CB1C164730B7F80400200C69 /* DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md; sourceTree = "<group>"; };
+		CB1C164930B7F9C700200C69 /* ACTIVE_TRIP_DARK_MODE_GUIDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ACTIVE_TRIP_DARK_MODE_GUIDE.md; sourceTree = "<group>"; };
+		CB1C164B30B7FAD700200C69 /* ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md; sourceTree = "<group>"; };
 		CB3C314B30A2EE42009070C1 /* THEME_UPDATES_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = THEME_UPDATES_SUMMARY.md; sourceTree = "<group>"; };
 		CB3C63A12E0933E8009CF31A /* YourZonesUV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourZonesUV.swift; sourceTree = "<group>"; };
 		CB3C63A22E0933E8009CF31A /* YourZonesUV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourZonesUV.xib; sourceTree = "<group>"; };
@@ -3836,6 +3844,10 @@
 				CB3D672330B16A6200EE5CB2 /* TRANSACTION_DARK_MODE_SUMMARY.md */,
 				CB3D672530B16ABD00EE5CB2 /* TRANSACTION_DARK_MODE_BEFORE_AFTER.md */,
 				CB3D672730B174B200EE5CB2 /* TRANSACTION_HISTORY_DARK_MODE_UPDATE.md */,
+				CB1C164530B7F7D100200C69 /* DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md */,
+				CB1C164730B7F80400200C69 /* DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md */,
+				CB1C164930B7F9C700200C69 /* ACTIVE_TRIP_DARK_MODE_GUIDE.md */,
+				CB1C164B30B7FAD700200C69 /* ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -4888,6 +4900,7 @@
 				ACB53D7529A882D000980F43 /* progress.wav in Resources */,
 				846DB0CB265BB67B009D2BCD /* CancelBookingView.xib in Resources */,
 				1875D76325BAF95300D54670 /* 2.wav in Resources */,
+				CB1C164C30B7FAD700200C69 /* ACTIVE_TRIP_DARK_MODE_TROUBLESHOOTING.md in Resources */,
 				846DB0B7265BB67B009D2BCD /* MSPDetailsTVCell.xib in Resources */,
 				846DB0C2265BB67B009D2BCD /* CabTypeCVCell.xib in Resources */,
 				846DB0FA265BB67B009D2BCD /* UserPreferencesDialogView.xib in Resources */,
@@ -4920,6 +4933,7 @@
 				1875D75625BAF95300D54670 /* voip_notification_2.wav in Resources */,
 				846DB086265BB67B009D2BCD /* RentalPackageDetailsScreenDesign.xib in Resources */,
 				1875D76225BAF95300D54670 /* 3.wav in Resources */,
+				CB1C164A30B7F9C700200C69 /* ACTIVE_TRIP_DARK_MODE_GUIDE.md in Resources */,
 				1875D73325BAF95300D54670 /* Roboto-LightItalic.ttf in Resources */,
 				846DB069265BB67B009D2BCD /* WayBillScreenDesign.xib in Resources */,
 				1875D72C25BAF95300D54670 /* Poppins-Light.ttf in Resources */,
@@ -4962,6 +4976,7 @@
 				1875D72A25BAF95300D54670 /* Roboto-Medium.ttf in Resources */,
 				846DB05A265BB67B009D2BCD /* ManageProfileScreenDesign.xib in Resources */,
 				846DB06E265BB67B009D2BCD /* AddDestinationScreenDesign.xib in Resources */,
+				CB1C164830B7F80400200C69 /* DRIVER_ARRIVED_DARK_MODE_QUICK_REF.md in Resources */,
 				CBCBE42B30A2E0C500D41E0C /* JOBVIEW_USERFEEDBACK_THEME_FIX.md in Resources */,
 				1875D07D25BAF77C00D54670 /* LaunchScreen.storyboard in Resources */,
 				846DB047265BB67A009D2BCD /* HelpNoteForRideScreenDesign.xib in Resources */,
@@ -5084,6 +5099,7 @@
 				846DB071265BB67B009D2BCD /* DriverArrivedScreenDesign.xib in Resources */,
 				1875D75225BAF95300D54670 /* 2.mp3 in Resources */,
 				846DB0CF265BB67B009D2BCD /* OpenPassengerDetailView.xib in Resources */,
+				CB1C164630B7F7D100200C69 /* DRIVER_ARRIVED_DARK_MODE_IMPLEMENTATION.md in Resources */,
 				846DB33B265BD4B4009D2BCD /* EPContactCell.xib in Resources */,
 				846DB042265BB67A009D2BCD /* ViewDeliveryDetailsScreenDesign.xib in Resources */,
 				1875D75825BAF95300D54670 /* 6.wav in Resources */,

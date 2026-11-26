@@ -421,11 +421,15 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
                 
                 let camera = GeneralFunctions.getCameraPosition(location:CLLocation(latitude: 0.0, longitude: 0.0), zoomLevel:0.0, mapView:self.gMapView)
                 gMapView = GMSMapView.map(withFrame: self.googleMapContainerView.frame, camera: camera)
-                if(GeneralFunctions.getDayNightForToday().uppercased() == "NIGHT"){
+                
+                // Apply dark/light map style based on theme
+                let themeManager = ThemeManager.shared
+                if themeManager.isDarkModeActive {
                     self.gMapView.nightMapStyle()
-                }else{
+                } else {
                     self.gMapView.mapStyle = nil
                 }
+                
                 gMapView.settings.rotateGestures = true
                 gMapView.settings.tiltGestures = true
                 gMapView.delegate = self
@@ -635,7 +639,13 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        // Register for theme change notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(themeDidChange), name: ThemeManager.themeDidChangeNotification, object: nil)
+        
         self.setnavBarTintColor(color: UIColor.UCAColor.AppThemeColor)
+        
+        // Apply initial theme
+        applyTheme()
     }
     
     @objc func keyboardWillShow(notification: Notification) {
@@ -701,7 +711,267 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
     }
     
     deinit {
+        NotificationCenter.default.removeObserver(self, name: ThemeManager.themeDidChangeNotification, object: nil)
         releaseAllTask()
+    }
+    
+    @objc func themeDidChange() {
+        applyTheme()
+    }
+    
+    func applyTheme() {
+        let themeManager = ThemeManager.shared
+        
+        // 1. Main backgrounds
+        self.view.backgroundColor = themeManager.backgroundColor()
+        self.contentView?.backgroundColor = themeManager.backgroundColor()
+        self.googleMapContainerView?.backgroundColor = themeManager.backgroundColor()
+        
+        // 2. Apply map style based on theme (if map exists)
+        if self.gMapView != nil {
+            if themeManager.isDarkModeActive {
+                self.gMapView.nightMapStyle()
+            } else {
+                self.gMapView.mapStyle = nil
+            }
+        }
+        
+        // 3. Bottom details view - Google Wallet-inspired dark styling
+        if themeManager.isDarkModeActive {
+            // Dark mode: Use dark card background with subtle border
+            self.bottomDetailsView?.backgroundColor = themeManager.cardBackgroundColor()
+            self.bottomDetailsView?.layer.shadowColor = UIColor.black.cgColor
+            self.bottomDetailsView?.layer.shadowOpacity = 0.6
+            self.bottomDetailsView?.layer.shadowRadius = 8
+            self.bottomDetailsView?.layer.shadowOffset = CGSize(width: 0, height: -2)
+            
+            // Add subtle border for depth
+            self.bottomDetailsView?.layer.borderColor = themeManager.borderColor().cgColor
+            self.bottomDetailsView?.layer.borderWidth = 0.5
+        } else {
+            // Light mode: Keep white background with light shadow
+            self.bottomDetailsView?.backgroundColor = UIColor.white
+            self.bottomDetailsView?.layer.shadowColor = UIColor.lightGray.cgColor
+            self.bottomDetailsView?.layer.shadowOpacity = 0.9
+            self.bottomDetailsView?.layer.shadowRadius = 3
+            self.bottomDetailsView?.layer.shadowOffset = CGSize.zero
+            
+            // Remove border in light mode
+            self.bottomDetailsView?.layer.borderWidth = 0
+        }
+        
+        // 4. Text labels (primary)
+        self.dropOffHLbl?.textColor = themeManager.textColor()
+        self.userNameLbl?.textColor = themeManager.textColor()
+        self.receiverNameLbl?.textColor = themeManager.textColor()
+        self.receiverHLbl?.textColor = themeManager.textColor()
+        self.senderNameLbl?.textColor = themeManager.textColor()
+        self.jobStatusTitleLbl?.textColor = themeManager.textColor()
+        self.progressStatusTitleLbl?.textColor = themeManager.textColor()
+        
+        // 5. Text labels (secondary)
+        self.timeLbl?.textColor = themeManager.secondaryTextColor()
+        self.distanceLbl?.textColor = themeManager.secondaryTextColor()
+        self.stopOverPointHLbl?.textColor = themeManager.secondaryTextColor()
+        self.sourceAddLbl?.textColor = themeManager.secondaryTextColor()
+        self.hourHLbl?.textColor = themeManager.secondaryTextColor()
+        self.minuteHLbl?.textColor = themeManager.secondaryTextColor()
+        self.secHLbl?.textColor = themeManager.secondaryTextColor()
+        self.hourVLbl?.textColor = themeManager.textColor()
+        self.minuteVLbl?.textColor = themeManager.textColor()
+        self.secVLbl?.textColor = themeManager.textColor()
+        self.waitingTimeLbl?.textColor = themeManager.secondaryTextColor()
+        
+        // 6. Multi-delivery related labels (UILabel outlets)
+        self.recHLbl?.textColor = themeManager.textColor()
+        self.recNameValLbl?.textColor = themeManager.textColor()
+        self.noOfPersonLbl?.textColor = themeManager.secondaryTextColor()
+        self.mspCancelLbl?.textColor = themeManager.textColor()
+        self.surgePayAmtLbl?.textColor = themeManager.textColor()
+        self.surgeLaterLbl?.textColor = themeManager.secondaryTextColor()
+        
+        // 7. Delivery details view background (card-style)
+        if self.deliveryDetailsView != nil && !self.deliveryDetailsView.isHidden {
+            self.deliveryDetailsView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            
+            // Add subtle border in dark mode
+            if themeManager.isDarkModeActive {
+                self.deliveryDetailsView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.deliveryDetailsView?.layer.borderWidth = 0.5
+            } else {
+                self.deliveryDetailsView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 8. Add destination view (if present)
+        if self.addDestView != nil {
+            self.addDestView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            self.addDestLbl?.textColor = themeManager.textColor()
+            self.addDestinationLbl?.textColor = themeManager.textColor()
+            
+            if themeManager.isDarkModeActive {
+                self.addDestView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.addDestView?.layer.borderWidth = 0.5
+            } else {
+                self.addDestView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 9. Toll note view (if present)
+        if self.tollNoteView != nil && !self.tollNoteView.isHidden {
+            self.tollNoteView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            self.tollNoteVLbl?.textColor = themeManager.textColor()
+            
+            if themeManager.isDarkModeActive {
+                self.tollNoteView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.tollNoteView?.layer.borderWidth = 0.5
+            } else {
+                self.tollNoteView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 10. Update icon tint colors for better visibility
+        if themeManager.isDarkModeActive {
+            GeneralFunctions.setImgTintColor(imgView: self.deliveryDetailsImgView, color: UIColor.white)
+        } else {
+            GeneralFunctions.setImgTintColor(imgView: self.deliveryDetailsImgView, color: UIColor.UCAColor.AppThemeTxtColor_1)
+        }
+        
+        // 11. OTP verification view if present
+        if self.jobOTPVerificationView != nil {
+            self.jobOTPVerificationView.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            
+            // Add border in dark mode for better definition
+            if themeManager.isDarkModeActive {
+                self.jobOTPVerificationView.layer.borderColor = themeManager.borderColor().cgColor
+                self.jobOTPVerificationView.layer.borderWidth = 0.5
+            } else {
+                self.jobOTPVerificationView.layer.borderWidth = 0
+            }
+        }
+        
+        // 12. Background view for OTP (semi-transparent overlay)
+        if self.bgView != nil {
+            self.bgView.backgroundColor = themeManager.isDarkModeActive ? 
+                UIColor.black.withAlphaComponent(0.7) : 
+                UIColor.black.withAlphaComponent(0.5)
+        }
+        
+        // 13. Top navigation view (if present)
+        if self.topNavigationView != nil {
+            // Keep the app theme color but adjust shadow
+            self.topNavigationView.navContaintView.layer.shadowColor = themeManager.isDarkModeActive ? 
+                UIColor.black.cgColor : UIColor.lightGray.cgColor
+            self.topNavigationView.navContaintView.layer.shadowOpacity = themeManager.isDarkModeActive ? 0.8 : 0.6
+        }
+        
+        // 14. Top container background (if applicable)
+        if self.topContainerView != nil {
+            self.topContainerView.backgroundColor = UIColor.clear
+        }
+        
+        // 15. Sender detail view (UFX)
+        if self.senderDetailView != nil && !self.senderDetailView.isHidden {
+            self.senderDetailView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            
+            if themeManager.isDarkModeActive {
+                self.senderDetailView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.senderDetailView?.layer.borderWidth = 0.5
+            } else {
+                self.senderDetailView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 15a. UFX detail bottom view (if present)
+        if self.detailBottomVIew != nil && !self.detailBottomVIew.isHidden {
+            self.detailBottomVIew?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            
+            if themeManager.isDarkModeActive {
+                self.detailBottomVIew?.layer.borderColor = themeManager.borderColor().cgColor
+                self.detailBottomVIew?.layer.borderWidth = 0.5
+            } else {
+                self.detailBottomVIew?.layer.borderWidth = 0
+            }
+        }
+        
+        // 15b. Progress view (UFX timer view)
+        if self.progressView != nil && !self.progressView.isHidden {
+            self.progressView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            
+            if themeManager.isDarkModeActive {
+                self.progressView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.progressView?.layer.borderWidth = 0.5
+            } else {
+                self.progressView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 16. Safety/Edit item views (if present)
+        if self.editItemView != nil {
+            self.editItemView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            self.personLimitNoteLbl?.textColor = themeManager.textColor()
+            self.safetyProofNoteLbl?.textColor = themeManager.textColor()
+            self.editItemHLbl?.textColor = themeManager.textColor()
+            self.pageHLbl?.textColor = themeManager.textColor()
+            
+            if themeManager.isDarkModeActive {
+                self.editItemView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.editItemView?.layer.borderWidth = 0.5
+            } else {
+                self.editItemView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 16a. Edit item background overlay
+        if self.editItemBGView != nil {
+            self.editItemBGView?.backgroundColor = themeManager.isDarkModeActive ? 
+                UIColor.black.withAlphaComponent(0.7) : 
+                UIColor.black.withAlphaComponent(0.5)
+        }
+        
+        // 17. Surge price view (if present)
+        if self.surgePriceView != nil {
+            self.surgePriceView?.backgroundColor = themeManager.isDarkModeActive ? 
+                themeManager.cardBackgroundColor() : UIColor.white
+            self.surgePriceHLbl?.textColor = themeManager.textColor()
+            self.surgePriceVLbl?.textColor = themeManager.textColor()
+            
+            if themeManager.isDarkModeActive {
+                self.surgePriceView?.layer.borderColor = themeManager.borderColor().cgColor
+                self.surgePriceView?.layer.borderWidth = 0.5
+            } else {
+                self.surgePriceView?.layer.borderWidth = 0
+            }
+        }
+        
+        // 17a. Surge price background overlay
+        if self.surgePriceBGView != nil {
+            self.surgePriceBGView?.backgroundColor = themeManager.isDarkModeActive ? 
+                UIColor.black.withAlphaComponent(0.7) : 
+                UIColor.black.withAlphaComponent(0.5)
+        }
+        
+        // 18. MSP cancel view (if present)
+        if self.mspCancelView != nil && !self.mspCancelView.isHidden {
+            // Keep the brand color but ensure proper visibility
+            if themeManager.isDarkModeActive {
+                GeneralFunctions.setImgTintColor(imgView: self.mspCancelImgView, color: UIColor.white)
+                GeneralFunctions.setImgTintColor(imgView: self.mspCancelCloseImgView, color: UIColor.white)
+            } else {
+                GeneralFunctions.setImgTintColor(imgView: self.mspCancelImgView, color: UIColor.UCAColor.AppThemeTxtColor)
+                GeneralFunctions.setImgTintColor(imgView: self.mspCancelCloseImgView, color: UIColor.UCAColor.AppThemeTxtColor)
+            }
+        }
+        
+        print("✅ ActiveTripUV: Theme applied - Dark mode: \(themeManager.isDarkModeActive)")
     }
     
     func closeEditItemView(){
@@ -774,6 +1044,19 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
     func openEditItemView(){
         
         self.slideTripBtn.Reset()
+        
+        // Apply theme before showing
+        let themeManager = ThemeManager.shared
+        self.editItemView.backgroundColor = themeManager.isDarkModeActive ? themeManager.cardBackgroundColor() : UIColor.white
+        self.editItemBGView.backgroundColor = themeManager.isDarkModeActive ? UIColor.black.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.5)
+        
+        if themeManager.isDarkModeActive {
+            self.editItemView.layer.borderColor = themeManager.borderColor().cgColor
+            self.editItemView.layer.borderWidth = 0.5
+        } else {
+            self.editItemView.layer.borderWidth = 0
+        }
+        
         self.editItemView.isHidden = false
         self.editItemBGView.isHidden = false
 
@@ -931,14 +1214,25 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
         
         /* If set to BackgroundColor for TopNavigationView */
         if(self.topNavigationView != nil){
+            let themeManager = ThemeManager.shared
             self.topNavigationView.topHeaderView.backgroundColor = UIColor.UCAColor.AppThemeColor
             self.topNavigationView.navContaintView.layer.shadowOpacity = 0.6
             self.topNavigationView.navContaintView.layer.shadowOffset = CGSize.zero
-            self.topNavigationView.navContaintView.layer.shadowColor = UIColor.lightGray.cgColor
+            self.topNavigationView.navContaintView.layer.shadowColor = themeManager.isDarkModeActive ? UIColor.black.cgColor : UIColor.lightGray.cgColor
         }
         
         /* If set to Data in BottomDetailsView */
-        self.bottomDetailsView.layer.addShadow(opacity: 0.9, radius: 3, UIColor.lightGray)
+        let themeManager = ThemeManager.shared
+        
+        // Apply theme-aware shadow styling
+        if themeManager.isDarkModeActive {
+            self.bottomDetailsView.layer.addShadow(opacity: 0.6, radius: 8, UIColor.black)
+            self.bottomDetailsView.layer.borderColor = themeManager.borderColor().cgColor
+            self.bottomDetailsView.layer.borderWidth = 0.5
+        } else {
+            self.bottomDetailsView.layer.addShadow(opacity: 0.9, radius: 3, UIColor.lightGray)
+            self.bottomDetailsView.layer.borderWidth = 0
+        }
         self.bottomDetailsView.layer.roundCorners(radius: 15)
         
         self.callView.backgroundColor = UIColor.UCAColor.CallImageBGColor
@@ -948,6 +1242,11 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
         self.dialogueView.backgroundColor = UIColor.UCAColor.noteView
         self.jobView.backgroundColor = UIColor.UCAColor.jobView
         self.adminCallView.backgroundColor = UIColor.UCAColor.callToAdminView
+        
+        // Apply theme-aware icon tints (always white as they're on colored backgrounds)
+        GeneralFunctions.setImgTintColor(imgView: self.callImgView, color: UIColor.white)
+        GeneralFunctions.setImgTintColor(imgView: self.chatImgView, color: UIColor.white)
+        GeneralFunctions.setImgTintColor(imgView: self.navigationImgView, color: UIColor.white)
         
         GeneralFunctions.setImgTintColor(imgView: self.mspCancelImageView, color: UIColor.UCAColor.AppThemeTxtColor)
         GeneralFunctions.setImgTintColor(imgView: self.mspCloseImageView, color: UIColor.UCAColor.AppThemeTxtColor)
@@ -2725,8 +3024,19 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
         
         surgePriceView.center = CGPoint(x: self.contentView.bounds.midX, y: self.contentView.bounds.midY)
         
+        // Apply theme to surge price view
+        let themeManager = ThemeManager.shared
+        surgePriceView.backgroundColor = themeManager.isDarkModeActive ? themeManager.cardBackgroundColor() : UIColor.white
+        
+        if themeManager.isDarkModeActive {
+            surgePriceView.layer.borderColor = themeManager.borderColor().cgColor
+            surgePriceView.layer.borderWidth = 0.5
+        } else {
+            surgePriceView.layer.borderWidth = 0
+        }
+        
         surgePriceBGView = UIView()
-        surgePriceBGView.backgroundColor = UIColor.black
+        surgePriceBGView.backgroundColor = themeManager.isDarkModeActive ? UIColor.black : UIColor.black
         self.surgePriceBGView.alpha = 0
         surgePriceBGView.isUserInteractionEnabled = true
         
@@ -3309,8 +3619,20 @@ class ActiveTripUV: UIViewController, GMSMapViewDelegate, OnLocationUpdateDelega
         
         jobOTPVerificationView.layer.cornerRadius = 10
         
+        // Apply theme to OTP view
+        let themeManager = ThemeManager.shared
+        jobOTPVerificationView.backgroundColor = themeManager.isDarkModeActive ? themeManager.cardBackgroundColor() : UIColor.white
+        
+        // Add border in dark mode for better definition
+        if themeManager.isDarkModeActive {
+            jobOTPVerificationView.layer.borderColor = themeManager.borderColor().cgColor
+            jobOTPVerificationView.layer.borderWidth = 0.5
+        } else {
+            jobOTPVerificationView.layer.borderWidth = 0
+        }
+        
         self.bgView = UIView.init(frame: CGRect(x: 0, y: 0, width: Int(self.view.frame.width), height: Int(self.view.frame.height)))
-        self.bgView.backgroundColor = UIColor.black.withAlphaComponent(0.75)
+        self.bgView.backgroundColor = themeManager.isDarkModeActive ? UIColor.black.withAlphaComponent(0.7) : UIColor.black.withAlphaComponent(0.5)
         
         self.view.addSubview(self.bgView)
         self.view.addSubview(jobOTPVerificationView)
